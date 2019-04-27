@@ -9,60 +9,112 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>slot</title>
+    <style>
+        html {
+            font-family: '微軟正黑體', ' monospace';
+        }
+
+        div img {
+            width: 70px;
+            height: 70px;
+        }
+
+        input {
+            width: 80px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container d-flex flex-column ">
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i1"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i2"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i3"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i4"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i5"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i6"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i7"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i8"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i9"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i10"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i11"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i12"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
+    <div class="row">
+        <div class="mt-5" style="margin-left:200px;">
+            <div class="row">
+                <div id="i1" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
+                <div id="i2" class="mr-4"> <img src="images/beer.png" alt="#" class="rounded-circle"></div>
+                <div id="i3" class="mr-4"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
+                <div id="i4" class="mr-4"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
+                <div id="i5" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
+            </div>
+            <div class="row mt-3">
+                <div id="i16" style="margin-right:305px;"> <img src="images/ham.png" alt="#" class="rounded-circle">
+                </div>
+                <div id="i6"> <img src="images/pizza.png" alt="#" class="rounded-circle"></div>
+            </div>
+            <div class="row mt-3">
+                <div id="i15" style="margin-right:305px;"> <img src="images/apple.png" alt="#" class="rounded-circle">
+                </div>
+                <div id="i7"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
+            </div>
+            <div class="row mt-3">
+                <div id="i14" style="margin-right:305px;"> <img src="images/beer.png" alt="#" class="rounded-circle">
+                </div>
+                <div id="i8"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
+            </div>
+            <div class="row mt-3">
+                <div id="i13" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
+                <div id="i12" class="mr-4"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
+                <div id="i11" class="mr-4"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
+                <div id="i10" class="mr-4"> <img src="images/beer.png" alt="#" class="rounded-circle"></div>
+                <div id="i9" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
+            </div>
         </div>
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i32"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i13"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-
+        <div>
+            <div class="d-flex ml-5 mt-5">
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/apple.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X5</h3>
+                        <input type="text" name="text" id="apple-bet" placeholder="0">
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/bling.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X10</h3>
+                        <input type="text" name="text" id="bling-bet" placeholder="0">
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/banana.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X15</h3>
+                        <input type="text" name="text" id="banana-bet" placeholder="0">
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/beer.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X20</h3>
+                        <input type="text" name="text" id="beer-bet" placeholder="0">
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/pizza.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X50</h3>
+                        <input type="text" name="text" id="pizza-bet" placeholder="0">
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 100px; height: 180px;">
+                    <img src="images/ham.png" class="card-img-top" alt="#">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h3 class="card-text text-center">X100</h3>
+                        <input type="text" name="text" id="ham-bet" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="ml-5 mt-5">
+                <h3>我的錢包:</h3>
+                <h3>本局獲利:</h3>
+                <button type="button" id="play" class="btn btn-primary justify-content-center mt-3">開始</button>
+            </div>
         </div>
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i31"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i14"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-        </div>
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i30"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i15"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-        </div>
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i29"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i16"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-        </div>
-        <div class="d-flex justify-content-between mt-3">
-            <div id="i28"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i27"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i26"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i25"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i24"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i23"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i22"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i21"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i20"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i19"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i18"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-            <div id="i17"> <img src="http://fakeimg.pl/60x60" alt="#"></div>
-
-        </div>
-        <button type="button" id="play" class="btn btn-primary justify-content-center mt-3">開始</button>
     </div>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -77,31 +129,56 @@
     </script>
     <script>
         var times = 0;
+        var apple = 0,
+            bling = 0,
+            banana = 0,
+            pizza = 0,
+            beer = 0,
+            ham = 0;
+            $('#apple-bet').change(function(){
+                apple = +$('#apple-bet').val();
+            })
+            $('#bling-bet').change(function(){
+                bling = +$('#bling-bet').val();
+            })
+            $('#banana-bet').change(function(){
+                banana = +$('#banana-bet').val();
+            })
+            $('#pizza-bet').change(function(){
+                pizza= +$('#pizza-bet').val();
+            })
+            $('#beer-bet').change(function(){
+                beer = +$('#beer-bet').val();
+            })
+            $('#ham-bet').change(function(){
+                ham = +$('#ham-bet').val();
+            })
+
         $("#play").on('click', function () {
             $('#play').attr('disabled', 'disabled');
             $('div').css('outline', 'none');
-            var a = Math.floor(Math.random() * 31) + 1;
+            var a = Math.floor(Math.random() * 15) + 1;
             var i = 1;
             var setT = setInterval(function () {
 
                 $('#i' + i).css("outline", "solid 3px red ")
                 $('#i' + (i - 1)).css("outline", "none")
 
-                if (i == 33) {
+                if (i == 17) {
                     i = 0;
                     times++;
                     $('#i' + (i - 1)).css("outline", "none")
                 }
 
-                if (times >= 2 && i == a) {
+                if (times >= 1 && i == a) {
                     clearInterval(setT);
                     $('#play').removeAttr('disabled');
                     times = 0;
                 }
                 i++;
             }, 100)
-
         });
+
     </script>
 </body>
 
