@@ -186,6 +186,7 @@
             $('#wallet').html('我的錢包:' + myMoney);
             $('#play').attr('disabled', 'disabled');
             $('#reset').attr('disabled', 'disabled');
+            $('input').attr('disabled', 'disabled');
             $('div').css('outline', 'none');
             var random = Math.floor(Math.random() * 15) + 1;
             var i = 1;
@@ -212,6 +213,8 @@
                         $('#profit').html('本局獲利:  ');
                         $('#play').removeAttr('disabled');
                         $('#reset').removeAttr('disabled');
+                        $('input').removeAttr('disabled');
+
 
                         clearTimeout(seT2);
                     },1000)
