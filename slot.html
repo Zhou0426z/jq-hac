@@ -65,50 +65,51 @@
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/apple.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X5</h3>
+                        <h3 class="card-text text-center">X1</h3>
                         <input type="text" name="text" id="apple-bet" placeholder="0">
                     </div>
                 </div>
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/bling.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X10</h3>
+                        <h3 class="card-text text-center">X2</h3>
                         <input type="text" name="text" id="bling-bet" placeholder="0">
                     </div>
                 </div>
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/banana.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X15</h3>
+                        <h3 class="card-text text-center">X5</h3>
                         <input type="text" name="text" id="banana-bet" placeholder="0">
                     </div>
                 </div>
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/beer.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X20</h3>
+                        <h3 class="card-text text-center">X10</h3>
                         <input type="text" name="text" id="beer-bet" placeholder="0">
                     </div>
                 </div>
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/pizza.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X50</h3>
+                        <h3 class="card-text text-center">X20</h3>
                         <input type="text" name="text" id="pizza-bet" placeholder="0">
                     </div>
                 </div>
                 <div class="card mr-3" style="width: 100px; height: 180px;">
                     <img src="images/ham.png" class="card-img-top" alt="#">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X100</h3>
+                        <h3 class="card-text text-center">X50</h3>
                         <input type="text" name="text" id="ham-bet" placeholder="0">
                     </div>
                 </div>
             </div>
             <div class="ml-5 mt-5">
-                <h3>我的錢包:</h3>
-                <h3>本局獲利:</h3>
+                <h3 id="wallet">我的錢包:100</h3>
+                <h3 id="profit">本局獲利:</h3>
                 <button type="button" id="play" class="btn btn-primary justify-content-center mt-3">開始</button>
+                <button type="button" id="reset" class="btn btn-primary justify-content-center mt-3">重新開始</button>
             </div>
         </div>
     </div>
@@ -129,35 +130,64 @@
     </script>
     <script>
         var times = 0;
+        var myMoney = 100,
+            profit = 0;
+
         var apple = 0,
             bling = 0,
             banana = 0,
             pizza = 0,
             beer = 0,
             ham = 0;
-            $('#apple-bet').change(function(){
-                apple = +$('#apple-bet').val();
-            })
-            $('#bling-bet').change(function(){
-                bling = +$('#bling-bet').val();
-            })
-            $('#banana-bet').change(function(){
-                banana = +$('#banana-bet').val();
-            })
-            $('#pizza-bet').change(function(){
-                pizza= +$('#pizza-bet').val();
-            })
-            $('#beer-bet').change(function(){
-                beer = +$('#beer-bet').val();
-            })
-            $('#ham-bet').change(function(){
-                ham = +$('#ham-bet').val();
-            })
+        var odds = {
+            "images/apple.png": [0, 1],
+            "images/bling.png": [0, 2],
+            "images/banana.png": [0,5],
+            "images/beer.png": [0, 10],
+            "images/pizza.png": [0, 20],
+            "images/ham.png": [0, 50]
+        };
+        var betOdds = 0;
+        $('#apple-bet').change(function () {
+            odds["images/apple.png"][0] = +$('#apple-bet').val();
+            apple = +$('#apple-bet').val();
+        })
+        $('#bling-bet').change(function () {
+            odds["images/bling.png"][0] = +$('#bling-bet').val();
+            bling = +$('#bling-bet').val();
+        })
+        $('#banana-bet').change(function () {
+            odds["images/banana.png"][0] = +$('#banana-bet').val();
+            banana = +$('#banana-bet').val();
+        })
+        $('#pizza-bet').change(function () {
+            odds["images/pizza.png"][0] = +$('#pizza-bet').val();
+            pizza = +$('#pizza-bet').val();
+        })
+        $('#beer-bet').change(function () {
+            odds["images/beer.png"][0] = +$('#beer-bet').val();
+            beer = +$('#beer-bet').val();
+        })
+        $('#ham-bet').change(function () {
+            odds["images/ham.png"][0] = +$('#ham-bet').val();
+            ham = +$('#ham-bet').val();
+        })
 
         $("#play").on('click', function () {
+            if((apple + bling + banana + pizza + beer + ham)==0){
+                alert('尚未下注');
+                return;
+            }
+            if (myMoney < (apple + bling + banana + pizza + beer + ham)) {
+                alert('錢包不夠錢');
+                return;
+            }
+            myMoney -= (apple + bling + banana + pizza + beer + ham);
+            $('#wallet').html('我的錢包:' + myMoney);
             $('#play').attr('disabled', 'disabled');
+            $('#reset').attr('disabled', 'disabled');
             $('div').css('outline', 'none');
-            var a = Math.floor(Math.random() * 15) + 1;
+            var random = Math.floor(Math.random() * 15) + 1;
             var i = 1;
             var setT = setInterval(function () {
 
@@ -170,15 +200,35 @@
                     $('#i' + (i - 1)).css("outline", "none")
                 }
 
-                if (times >= 1 && i == a) {
+                if (times >= 1 && i == random) {
                     clearInterval(setT);
-                    $('#play').removeAttr('disabled');
+
                     times = 0;
+                    profit = giveMoney(i);
+                    $('#profit').html('本局獲利:  ' + profit);
+                    var seT2 = setTimeout(function () {
+                        myMoney += profit;
+                        $('#wallet').html('我的錢包:  ' + myMoney);
+                        $('#profit').html('本局獲利:  ');
+                        $('#play').removeAttr('disabled');
+                        $('#reset').removeAttr('disabled');
+
+                        clearTimeout(seT2);
+                    },1000)
+                   
                 }
                 i++;
             }, 100)
         });
-
+        $('#reset').on('click',function(){
+            myMoney = 100;
+            $('#wallet').html('我的錢包:  ' + myMoney);
+            profit = 0;
+        })
+        function giveMoney(i) {
+            var $src = $('#i' + i + ' img').attr('src');
+            return odds[$src][0] * odds[$src][1];
+        }
     </script>
 </body>
 
