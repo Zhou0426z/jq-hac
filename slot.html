@@ -1,238 +1,279 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>slot</title>
     <style>
-        html {
-            font-family: '微軟正黑體', ' monospace';
-        }
+      html {
+        font-family: "微軟正黑體", " monospace";
+      }
 
-        div img {
-            width: 70px;
-            height: 70px;
-        }
+      div img {
+        width: 70px;
+        height: 70px;
+      }
 
-        input {
-            width: 80px;
-            text-align: center;
-        }
+      input {
+        width: 80px;
+        text-align: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="row">
-        <div class="mt-5" style="margin-left:200px;">
-            <div class="row">
-                <div id="i1" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
-                <div id="i2" class="mr-4"> <img src="images/beer.png" alt="#" class="rounded-circle"></div>
-                <div id="i3" class="mr-4"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
-                <div id="i4" class="mr-4"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
-                <div id="i5" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
-            </div>
-            <div class="row mt-3">
-                <div id="i16" style="margin-right:305px;"> <img src="images/ham.png" alt="#" class="rounded-circle">
-                </div>
-                <div id="i6"> <img src="images/pizza.png" alt="#" class="rounded-circle"></div>
-            </div>
-            <div class="row mt-3">
-                <div id="i15" style="margin-right:305px;"> <img src="images/apple.png" alt="#" class="rounded-circle">
-                </div>
-                <div id="i7"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
-            </div>
-            <div class="row mt-3">
-                <div id="i14" style="margin-right:305px;"> <img src="images/beer.png" alt="#" class="rounded-circle">
-                </div>
-                <div id="i8"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
-            </div>
-            <div class="row mt-3">
-                <div id="i13" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
-                <div id="i12" class="mr-4"> <img src="images/banana.png" alt="#" class="rounded-circle"></div>
-                <div id="i11" class="mr-4"> <img src="images/apple.png" alt="#" class="rounded-circle"></div>
-                <div id="i10" class="mr-4"> <img src="images/beer.png" alt="#" class="rounded-circle"></div>
-                <div id="i9" class="mr-4"> <img src="images/bling.png" alt="#" class="rounded-circle"></div>
-            </div>
+      <div class="mt-5" style="margin-left: 200px;">
+        <div class="row">
+          <div id="i1" class="mr-4">
+            <img src="images/bling.png" alt="bling-bet" class="rounded-circle" />
+          </div>
+          <div id="i2" class="mr-4">
+            <img src="images/beer.png" alt="beer-bet" class="rounded-circle" />
+          </div>
+          <div id="i3" class="mr-4">
+            <img src="images/apple.png" alt="apple-bet" class="rounded-circle" />
+          </div>
+          <div id="i4" class="mr-4">
+            <img src="images/banana.png" alt="banana-bet" class="rounded-circle" />
+          </div>
+          <div id="i5" class="mr-4">
+            <img src="images/bling.png" alt="bling-bet" class="rounded-circle" />
+          </div>
         </div>
-        <div>
-            <div class="d-flex ml-5 mt-5">
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/apple.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X1</h3>
-                        <input type="text" name="text" id="apple-bet" placeholder="0">
-                    </div>
-                </div>
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/bling.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X2</h3>
-                        <input type="text" name="text" id="bling-bet" placeholder="0">
-                    </div>
-                </div>
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/banana.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X5</h3>
-                        <input type="text" name="text" id="banana-bet" placeholder="0">
-                    </div>
-                </div>
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/beer.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X10</h3>
-                        <input type="text" name="text" id="beer-bet" placeholder="0">
-                    </div>
-                </div>
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/pizza.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X20</h3>
-                        <input type="text" name="text" id="pizza-bet" placeholder="0">
-                    </div>
-                </div>
-                <div class="card mr-3" style="width: 100px; height: 180px;">
-                    <img src="images/ham.png" class="card-img-top" alt="#">
-                    <div class="card-body d-flex flex-column align-items-center">
-                        <h3 class="card-text text-center">X50</h3>
-                        <input type="text" name="text" id="ham-bet" placeholder="0">
-                    </div>
-                </div>
-            </div>
-            <div class="ml-5 mt-5">
-                <h3 id="wallet">我的錢包:100</h3>
-                <h3 id="profit">本局獲利:</h3>
-                <button type="button" id="play" class="btn btn-primary justify-content-center mt-3">開始</button>
-                <button type="button" id="reset" class="btn btn-primary justify-content-center mt-3">重新開始</button>
-            </div>
+        <div class="row mt-3">
+          <div id="i16" style="margin-right: 305px;">
+            <img src="images/ham.png" alt="ham-bet" class="rounded-circle" />
+          </div>
+          <div id="i6">
+            <img src="images/pizza.png" alt="pizza-bet" class="rounded-circle" />
+          </div>
         </div>
+        <div class="row mt-3">
+          <div id="i15" style="margin-right: 305px;">
+            <img src="images/apple.png" alt="apple-bet" class="rounded-circle" />
+          </div>
+          <div id="i7">
+            <img src="images/apple.png" alt="apple-bet" class="rounded-circle" />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div id="i14" style="margin-right: 305px;">
+            <img src="images/beer.png" alt="beer-bet" class="rounded-circle" />
+          </div>
+          <div id="i8">
+            <img src="images/banana.png" alt="banana-bet" class="rounded-circle" />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div id="i13" class="mr-4">
+            <img src="images/bling.png" alt="bling-bet" class="rounded-circle" />
+          </div>
+          <div id="i12" class="mr-4">
+            <img src="images/banana.png" alt="banana-bet" class="rounded-circle" />
+          </div>
+          <div id="i11" class="mr-4">
+            <img src="images/apple.png" alt="apple-bet" class="rounded-circle" />
+          </div>
+          <div id="i10" class="mr-4">
+            <img src="images/beer.png" alt="beer-bet" class="rounded-circle" />
+          </div>
+          <div id="i9" class="mr-4">
+            <img src="images/bling.png" alt="bling-bet" class="rounded-circle" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex ml-5 mt-5">
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/apple.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X1</h3>
+              <input type="text" name="text" id="apple-bet" placeholder="0" class="betList"/>
+            </div>
+          </div>
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/bling.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X2</h3>
+              <input type="text" name="text" id="bling-bet" placeholder="0" class="betList"/>
+            </div>
+          </div>
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/banana.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X5</h3>
+              <input type="text" name="text" id="banana-bet" placeholder="0"class="betList" />
+            </div>
+          </div>
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/beer.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X10</h3>
+              <input type="text" name="text" id="beer-bet" placeholder="0" class="betList"/>
+            </div>
+          </div>
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/pizza.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X20</h3>
+              <input type="text" name="text" id="pizza-bet" placeholder="0" class="betList"/>
+            </div>
+          </div>
+          <div class="card mr-3" style="width: 100px; height: 180px;">
+            <img src="images/ham.png" class="card-img-top" alt="#" />
+            <div class="card-body d-flex flex-column align-items-center">
+              <h3 class="card-text text-center">X50</h3>
+              <input type="text" name="text" id="ham-bet" placeholder="0" class="betList" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-5 mt-5">
+          <h3 id="wallet">我的錢包:100</h3>
+          <h3 id="profit">本局獲利:</h3>
+          <button
+            type="button"
+            id="play"
+            class="btn btn-primary justify-content-center mt-3"
+          >
+            開始
+          </button>
+          <button
+            type="button"
+            id="reset"
+            class="btn btn-primary justify-content-center mt-3"
+          >
+            重新開始
+          </button>
+        </div>
+      </div>
     </div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        var times = 0;
-        var myMoney = 100,
-            profit = 0;
+      var times = 0;
+      var myMoney = 100,
+        profit = 0;
 
-        var apple = 0,
-            bling = 0,
-            banana = 0,
-            pizza = 0,
-            beer = 0,
-            ham = 0;
-        var odds = {
-            "images/apple.png": [0, 1],
-            "images/bling.png": [0, 2],
-            "images/banana.png": [0,5],
-            "images/beer.png": [0, 10],
-            "images/pizza.png": [0, 20],
-            "images/ham.png": [0, 50]
-        };
-        var betOdds = 0;
-        $('#apple-bet').change(function () {
-            odds["images/apple.png"][0] = +$('#apple-bet').val();
-            apple = +$('#apple-bet').val();
-        })
-        $('#bling-bet').change(function () {
-            odds["images/bling.png"][0] = +$('#bling-bet').val();
-            bling = +$('#bling-bet').val();
-        })
-        $('#banana-bet').change(function () {
-            odds["images/banana.png"][0] = +$('#banana-bet').val();
-            banana = +$('#banana-bet').val();
-        })
-        $('#pizza-bet').change(function () {
-            odds["images/pizza.png"][0] = +$('#pizza-bet').val();
-            pizza = +$('#pizza-bet').val();
-        })
-        $('#beer-bet').change(function () {
-            odds["images/beer.png"][0] = +$('#beer-bet').val();
-            beer = +$('#beer-bet').val();
-        })
-        $('#ham-bet').change(function () {
-            odds["images/ham.png"][0] = +$('#ham-bet').val();
-            ham = +$('#ham-bet').val();
-        })
+      var odds = {
+        "apple-bet": [0, 1],
+        "bling-bet": [0, 2],
+        "banana-bet": [0, 5],
+        "beer-bet": [0, 10],
+        "pizza-bet": [0, 20],
+        "ham-bet": [0, 50],
+      };
+      var betOdds = 0;
+      $('.betList').on('change',function(){
+          var $this = $(this);
+          var id = $this.attr('id');
+          $this.val(checkBet($this.val()));
+          odds[id][0] = +$this.val();
+      })
 
-        $("#play").on('click', function () {
-            if((apple + bling + banana + pizza + beer + ham)==0){
-                alert('尚未下注');
-                return;
-            }
-            if (myMoney < (apple + bling + banana + pizza + beer + ham)) {
-                alert('錢包不夠錢');
-                return;
-            }
-            myMoney -= (apple + bling + banana + pizza + beer + ham);
-            $('#wallet').html('我的錢包:' + myMoney);
-            $('#play').attr('disabled', 'disabled');
-            $('#reset').attr('disabled', 'disabled');
-            $('input').attr('disabled', 'disabled');
-            $('div').css('outline', 'none');
-            var random = Math.floor(Math.random() * 15) + 1;
-            var i = 1;
-            var setT = setInterval(function () {
-
-                $('#i' + i).css("outline", "solid 3px red ")
-                $('#i' + (i - 1)).css("outline", "none")
-
-                if (i == 17) {
-                    i = 0;
-                    times++;
-                    $('#i' + (i - 1)).css("outline", "none")
-                }
-
-                if (times >= 1 && i == random) {
-                    clearInterval(setT);
-
-                    times = 0;
-                    profit = giveMoney(i);
-                    $('#profit').html('本局獲利:  ' + profit);
-                    var seT2 = setTimeout(function () {
-                        myMoney += profit;
-                        $('#wallet').html('我的錢包:  ' + myMoney);
-                        $('#profit').html('本局獲利:  ');
-                        $('#play').removeAttr('disabled');
-                        $('#reset').removeAttr('disabled');
-                        $('input').removeAttr('disabled');
-
-
-                        clearTimeout(seT2);
-                    },1000)
-                   
-                }
-                i++;
-            }, 100)
-        });
-        $('#reset').on('click',function(){
-            myMoney = 100;
-            $('#wallet').html('我的錢包:  ' + myMoney);
-            profit = 0;
-        })
-        function giveMoney(i) {
-            var $src = $('#i' + i + ' img').attr('src');
-            return odds[$src][0] * odds[$src][1];
+      $("#play").on("click", function () {
+        var sum = allBet();
+        if (sum == 0) {
+          alert("尚未下注");
+          return;
         }
-    </script>
-</body>
+        if (myMoney < sum) {
+          alert("錢包不夠錢");
+          return;
+        }
+        myMoney -= sum;
+        $("#wallet").html("我的錢包:" + myMoney);
+        $("#play").attr("disabled", "disabled");
+        $("#reset").attr("disabled", "disabled");
+        $("input").attr("disabled", "disabled");
+        $("div").css("outline", "none");
+        var random = Math.floor(Math.random() * 15) + 1;
+        var i = 1;
+        var setT = setInterval(function () {
+          $("#i" + i).css("outline", "solid 3px red ");
+          $("#i" + (i - 1)).css("outline", "none");
 
+          if (i == 17) {
+            i = 0;
+            times++;
+            $("#i" + (i - 1)).css("outline", "none");
+          }
+
+          if (times >= 1 && i == random) {
+            clearInterval(setT);
+
+            times = 0;
+            profit = giveMoney(i);
+            $("#profit").html("本局獲利:  " + profit);
+
+            var seT2 = setTimeout(function () {
+              myMoney += profit;
+              $("#wallet").html("我的錢包:  " + myMoney);
+              $("#profit").html("本局獲利:  ");
+              $("#play").removeAttr("disabled");
+              $("#reset").removeAttr("disabled");
+              $("input").removeAttr("disabled");
+
+              clearTimeout(seT2);
+            }, 1000);
+            
+          }
+          i++;
+        }, 100);
+      });
+      $("#reset").on("click", function () {
+        myMoney = 100;
+        $("#wallet").html("我的錢包:  " + myMoney);
+        profit = 0;
+      });
+      function giveMoney(i) {
+        var $src = $("#i" + i + " img").attr("alt");
+        return odds[$src][0] * odds[$src][1];
+      }
+
+      function checkBet(val) {
+        if(isNaN(val) || val < 0){
+            val = 0 ;
+        }
+        return val;
+      }
+      function allBet() {
+        var allBet = +$("#apple-bet").val();
+           allBet += +$("#bling-bet").val();
+           allBet += +$("#banana-bet").val() 
+           allBet += +$("#pizza-bet").val(); 
+           allBet += +$("#beer-bet").val(); 
+           allBet += +$("#ham-bet").val();
+          return allBet;
+      }
+    </script>
+  </body>
 </html>
